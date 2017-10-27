@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t php7apache .
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer

@@ -15,16 +15,32 @@ $app->get('/', function (Request $req,  Response $res, $args = []) {
 });
 
 
-$app->get('/message', function (Request $req,  Response $res, $args = []) {
+$app->get('/send', function (Request $req,  Response $res, $args = []) {
 
     try {
 
+        $data = [
+            "name" => "testName",
+            "company" => "testCompany",
+            "topic" => "testTopic",
+            "text" => "testText"
+        ];
+
+        $subject = 'Here is the subject';
+        $message[] = 'This is the HTML message body <b>in bold!</b>';
+
+        foreach ($data as $key => $value)
+            $message[] = "<b>$key:</b> $value";
+
+        $messageHTML = '<p>' . join('</p><p>', $message) . '</p>';
+
         $mail = new PHPMailer(true);
-        $mail->setFrom('werdffelynir@gmail.com', 'Mailer');
+        $mail->setFrom('site@mysite.com', 'Mailer');
         $mail->addAddress('werdffelynir@gmail.com', 'Joe User');
         $mail->isHTML(true);
-        $mail->Subject = 'Here is the subject';
-        $mail->Body = 'This is the HTML message body <b>in bold!</b>';
+        $mail->Subject = $subject;
+        $mail->Body = $messageHTML;
+        // $mail->send();
 
     } catch (Exception $error ) {
 
