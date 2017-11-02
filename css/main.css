@@ -1,0 +1,51 @@
+
+#app-wrapper {
+    display: block;
+    width: 100%;
+    height: 20%;
+}
+
+#app-logo, #app-display, #app-contacts, #app-society {
+    display: block;
+    width: 100%;
+    height: 20%;
+    border: 1px solid #000;
+
+}
+
+
+#app-logo-element {
+    /*position: absolute;*/
+    width: 500px;
+    height: 100px;
+    margin-top: 100px;
+    right: 5%;
+    background: url("/images/logo.png") no-repeat center center;
+}
+
+#app-display-element {
+    width: 500px;
+    height: 100px;
+    /*margin-top: 100px;*/
+    /*right: 5%;*/
+    /*background: url("/images/display.png") no-repeat center center;*/
+}
+
+
+
+/*FORM*/
+#app-contacts-form {
+    width: 25%;
+    margin: 100px auto;
+}
+
+#app-contacts-form > input {
+    display: block;
+    width: 100%;
+    border: 2px solid #3a3a3a;
+    border-radius: 30px;
+}
+
+
+
+
