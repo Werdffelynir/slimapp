@@ -11,5 +11,8 @@ ENV MYSQL_ROOT_PASSWORD=root
 
 EXPOSE 80 443
 
+WORKDIR /var/www/html
+
 RUN a2enmod rewrite
+
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
