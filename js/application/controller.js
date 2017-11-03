@@ -17,6 +17,25 @@
         function (list){
           App.node = App.search('[id^=app-]', 'id');
 
+          App.Animation.run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           console.log(App.node);
         },
         function (error){
