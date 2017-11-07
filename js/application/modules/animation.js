@@ -17,7 +17,7 @@ App.namespace('Animation', function(app) {
     if ('particlesJS' in window) {
 
       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-      particlesJS.load('app-display-particles', '/js/assets/particles.json', function() {
+      particlesJS.load('particles', '/js/assets/particles.json', function() {
         console.log('callback - particles.js config loaded');
       });
 

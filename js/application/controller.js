@@ -17,7 +17,8 @@
         function (list){
           App.node = App.search('[id^=app-]', 'id');
 
-          // App.Animation.run();
+          App.Animation.run();
+          App.EmailForm.run();
 
 
 
