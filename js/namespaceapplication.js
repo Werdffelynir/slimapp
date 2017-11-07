@@ -466,6 +466,8 @@
   /**
    * Execute callback for each element in list
    *
+   * Example: .each( ArratObjecList, function (item) {} )
+   *
    * @param list
    * @param callback
    * @param tmp
@@ -473,9 +475,11 @@
   NamespaceApplication.each = function (list, callback, tmp) {
     var i = 0;
     if (list instanceof Array)
-      for (i = 0; i < list.length; i++) callback.call({}, list[i], i, tmp);
+      for (i = 0; i < list.length; i++)
+        callback.call({}, list[i], i, tmp);
     else
-      for (i in list) callback.call({}, list[i], i, tmp);
+      for (i in list)
+        callback.call({}, list[i], i, tmp);
   };
 
   /**

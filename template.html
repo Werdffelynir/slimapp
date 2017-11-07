@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">-->
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/font.css">
@@ -41,22 +40,24 @@
             <div class="contacts">
 
                 <div id="app-contact-form" class="contacts-form">
-                    <form action="" method="post">
+                    <form>
                         <span>
                             <span></span>
-                            <span><input type="text" name="name" placeholder="You Name"></span>
+                            <span><input type="text" name="field0" placeholder="Name" value="абвгд"></span>
                         </span>
                         <span>
                             <span></span>
-                            <span><input type="text" name="name" placeholder="You Company"></span>
+                            <span><input type="text" name="field1" placeholder="Company" value="абвгд"></span>
                         </span>
                         <span>
                             <span></span>
-                            <span><input type="text" name="name" placeholder="Place"></span>
+                            <span><input type="text" name="field2" placeholder="Topic" value="абвгд"></span>
                         </span>
                         <span>
                             <span></span>
-                            <span><input type="text" name="name" placeholder="Holder"></span>
+                            <span>
+                                <textarea name="field3" placeholder="Text"></textarea>
+                            </span>
                         </span>
                     </form>
                 </div>
@@ -108,48 +109,9 @@
         </div>
     </section>
 
-<!--    <div id="app-logo">
-        <div id="app-logo-element"></div>
-    </div>
-
-    <div id="app-display">
-
-        <div id="app-display-wrapper">
-            <div id="app-display-particles" style=""></div>
-            <div id="app-display-display"><img src="/images/display.png" alt=""></div>
-        </div>
-
-    </div>
-
-    <div id="app-contacts">
-        <div id="app-contacts-btn-action">
-            <div class="btn">CONTACT US</div>
-        </div>
-        <div id="app-contacts-form">
-            <input type="text" name="name" placeholder="You Name">
-            <input type="text" name="name" placeholder="You Company">
-            <input type="text" name="name" placeholder="Place">
-            <input type="text" name="name" placeholder="Holder">
-            <div id="app-contacts-btn-send">
-                <div class="btn">SEND</div>
-            </div>
-        </div>
-    </div>
-
-    <div id="app-society">
-
-        <div class="btnr">Rs</div>
-        <div class="btnr">Gh</div>
-        <div class="btnr">Sf</div>
-
-    </div>-->
-
 </div>
 
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="/js/particles.min.js"></script>
 <script src="/js/namespaceapplication.js" data-init="/js/application/controller.js"></script>
 </body>
 </html>
