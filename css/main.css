@@ -15,7 +15,7 @@
     font-size: 100%;
 }
 body {
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 #app {
     background: url("/images/background.jpg") no-repeat 100% top;
@@ -41,10 +41,12 @@ section > div {
 
 /* section logotype */
 .logotype {
+    /*text-align: right;*/
+    /*padding-top: 30%;*/
+    /*padding-right: 0%;*/
+    /*padding-bottom: 20%;*/
+    padding-top: 28%;
     text-align: right;
-    padding-top: 30%;
-    padding-right: 0%;
-    padding-bottom: 20%;
 }
 .logotype > img {}
 
@@ -205,11 +207,9 @@ section > div {
 
     .logotype {
         padding-top: 24%;
-        padding-right: 24%;
+        text-align: center;
     }
-    .logotype>img {
-        width: 70%;
-    }
+    .logotype > img { }
 
 }
 
@@ -225,18 +225,18 @@ section > div {
     }
 
     .logotype {
-        padding-top: 40%;
-        padding-right: 21%;
+        padding-top: 25%;
+        text-align: center;
     }
     .logotype > img {
-        width: 70%;
+        width: 350px;
     }
 
     .window-description{
         font-size: 110%;
     }
     .society {
-        right: 7%;
+        right: 33%;
         margin-top: 0px;
     }
 
