@@ -5,31 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <title>36.6</title>
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/animate.css">
 </head>
 <body>
-
 <div id="app">
 
-    <section id="app-logotype">
+    <section id="app-logo">
         <div>
             <div class="logotype">
-                <img src="/images/logo.png" alt="">
+                <img src="/images/logo366.png" alt="">
             </div>
         </div>
     </section>
 
-    <section id="app-porthole">
+    <section id="app-window">
         <div>
-            <div class="porthole-wrapper">
-                <div id="particles" style="width: 1024px; height: 215px"></div>
-                <div class="porthole">
-                    <img src="/images/porthole.png" alt="">
-                    <div class="porthole-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto atque delectus.</div>
+            <div class="window-wrapper">
+                <div id="particles"></div>
+                <div id="window">
+                    <div class="window-description">
+                        Web-site synthesizing and under construction. If you still do not have our presentation or have any question please contact us.
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,78 +41,52 @@
         <div>
             <div class="contacts">
 
-                <div id="app-contact-form" class="contacts-form">
+                <div id="app-contact-button" class="btn">CONTACT US</div>
+
+                <div id="app-contact-form" class="contacts-form animated">
                     <form>
                         <span>
                             <span></span>
-                            <span><input type="text" name="field0" placeholder="Name" value="абвгд"></span>
+                            <span class="animated"><input type="text" name="field0" placeholder="Name" value=""></span>
                         </span>
                         <span>
                             <span></span>
-                            <span><input type="text" name="field1" placeholder="Company" value="абвгд"></span>
+                            <span class="animated"><input type="text" name="field1" placeholder="Company" value=""></span>
                         </span>
                         <span>
                             <span></span>
-                            <span><input type="text" name="field2" placeholder="Topic" value="абвгд"></span>
+                            <span class="animated"><input type="text" name="field2" placeholder="Topic" value=""></span>
                         </span>
                         <span>
                             <span></span>
-                            <span>
-                                <textarea name="field3" placeholder="Text"></textarea>
+                            <span class="animated"><input type="text" name="field3" placeholder="Email" value=""></span>
+                        </span>
+                        <span>
+                            <span></span>
+                            <span class="animated">
+                                <textarea name="field4" placeholder="Text"></textarea>
                             </span>
                         </span>
                     </form>
+
+                    <div id="app-contact-send" class="btn animated">SEND</div>
+
+                    <div class="loader" style="">wait...</div>
                 </div>
-                <div id="app-contact-button" class="btn">CONTACT US</div>
-
             </div>
-        </div>
-    </section>
 
-    <section id="app-society">
-        <div>
             <div class="society">
-
-                <div class="society-icons">
-
-                    <div class="ico-one">
-                        <div class="btnr">
-                            <img src="/images/soc-p.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="ico-two">
-                        <div class="btnr">
-                            <img src="/images/soc-t.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="ico-three">
-                        <div class="btnr">
-                            <img src="/images/soc-f.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="ico-fore">
-                        <div class="btnr">
-                            <img src="/images/soc-t.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
+                    <a href="/#" class="soc-btn soc-1"></a>
+                    <a href="https://www.behance.net/Galamaga" target="_blank" class="soc-btn soc-2"></a>
+                    <a href="https://ru.pinterest.com/GalamagaD/366/" target="_blank" class="soc-btn soc-3"></a>
+                    <a href="/#" class="soc-btn soc-4"></a>
             </div>
         </div>
     </section>
 
-    <section id="app-copyright">
-        <div>
-            <div class="copyright">&copy; 2017 LLC "36.6."</div>
-        </div>
-    </section>
+    <div id="copy"><span>&copy;</span> 2017 LLC "36.6."</div>
 
 </div>
-
 <script src="/js/particles.min.js"></script>
 <script src="/js/namespaceapplication.js" data-init="/js/application/controller.js"></script>
 </body>

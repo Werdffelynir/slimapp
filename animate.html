@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animate.css</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, minimal-ui"/>
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="dns-prefetch" href="//code.jquery.com"/>
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet'
+          type='text/css'>
+
+    <link rel="stylesheet" href="/css/animate.css"/>
+    <link rel="stylesheet" href="/css/grid.css"/>
+
+    <style>
+        * {
+            font-family: "sans-serif", "sans", "Ubuntu Condensed", "Ubuntu";
+            font-size: 100%;
+        }
+        #list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        h4 {
+            font-size: 110%;
+            padding: 10px 5px 3px 3px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul > li {
+            display: block;
+            cursor: pointer;
+            font-weight: 300;
+            padding: 3px;
+            background: #3a3a3a;
+            color: #ffffff;
+        }
+        ul > li:hover {
+            background: #2c2c2c;
+        }
+
+        #test {
+            margin-top: 200px;
+        }
+        #test h1 {
+            font-size: 48px;
+            color: #806d5a;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        }
+        code {
+            font-family: Consolas, sans-serif;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table">
+
+    <div class="table-cell width-15">
+        <div id="list">
+
+            <h4>Attention Seekers</h4>
+            <ul label="Attention Seekers">
+                <li data-value="bounce">bounce</li>
+                <li data-value="flash">flash</li>
+                <li data-value="pulse">pulse</li>
+                <li data-value="rubberBand">rubberBand</li>
+                <li data-value="shake">shake</li>
+                <li data-value="swing">swing</li>
+                <li data-value="tada">tada</li>
+                <li data-value="wobble">wobble</li>
+                <li data-value="jello">jello</li>
+            </ul>
+            <h4>Bouncing Entrances</h4>
+            <ul label="Bouncing Entrances">
+                <li data-value="bounceIn">bounceIn</li>
+                <li data-value="bounceInDown">bounceInDown</li>
+                <li data-value="bounceInLeft">bounceInLeft</li>
+                <li data-value="bounceInRight">bounceInRight</li>
+                <li data-value="bounceInUp">bounceInUp</li>
+            </ul>
+            <h4>Bouncing Exits</h4>
+            <ul label="Bouncing Exits">
+                <li data-value="bounceOut">bounceOut</li>
+                <li data-value="bounceOutDown">bounceOutDown</li>
+                <li data-value="bounceOutLeft">bounceOutLeft</li>
+                <li data-value="bounceOutRight">bounceOutRight</li>
+                <li data-value="bounceOutUp">bounceOutUp</li>
+            </ul>
+
+            <h4>Fading Entrances</h4>
+            <ul label="Fading Entrances">
+                <li data-value="fadeIn">fadeIn</li>
+                <li data-value="fadeInDown">fadeInDown</li>
+                <li data-value="fadeInDownBig">fadeInDownBig</li>
+                <li data-value="fadeInLeft">fadeInLeft</li>
+                <li data-value="fadeInLeftBig">fadeInLeftBig</li>
+                <li data-value="fadeInRight">fadeInRight</li>
+                <li data-value="fadeInRightBig">fadeInRightBig</li>
+                <li data-value="fadeInUp">fadeInUp</li>
+                <li data-value="fadeInUpBig">fadeInUpBig</li>
+            </ul>
+
+            <h4>Fading Exits</h4>
+            <ul label="Fading Exits">
+                <li data-value="fadeOut">fadeOut</li>
+                <li data-value="fadeOutDown">fadeOutDown</li>
+                <li data-value="fadeOutDownBig">fadeOutDownBig</li>
+                <li data-value="fadeOutLeft">fadeOutLeft</li>
+                <li data-value="fadeOutLeftBig">fadeOutLeftBig</li>
+                <li data-value="fadeOutRight">fadeOutRight</li>
+                <li data-value="fadeOutRightBig">fadeOutRightBig</li>
+                <li data-value="fadeOutUp">fadeOutUp</li>
+                <li data-value="fadeOutUpBig">fadeOutUpBig</li>
+            </ul>
+
+            <h4>Flippers</h4>
+            <ul label="Flippers">
+                <li data-value="flip">flip</li>
+                <li data-value="flipInX">flipInX</li>
+                <li data-value="flipInY">flipInY</li>
+                <li data-value="flipOutX">flipOutX</li>
+                <li data-value="flipOutY">flipOutY</li>
+            </ul>
+
+            <h4>Lightspeed</h4>
+            <ul label="Lightspeed">
+                <li data-value="lightSpeedIn">lightSpeedIn</li>
+                <li data-value="lightSpeedOut">lightSpeedOut</li>
+            </ul>
+
+            <h4>Rotating Entrances</h4>
+            <ul label="Rotating Entrances">
+                <li data-value="rotateIn">rotateIn</li>
+                <li data-value="rotateInDownLeft">rotateInDownLeft</li>
+                <li data-value="rotateInDownRight">rotateInDownRight</li>
+                <li data-value="rotateInUpLeft">rotateInUpLeft</li>
+                <li data-value="rotateInUpRight">rotateInUpRight</li>
+            </ul>
+
+            <h4>Rotating Exits</h4>
+            <ul label="Rotating Exits">
+                <li data-value="rotateOut">rotateOut</li>
+                <li data-value="rotateOutDownLeft">rotateOutDownLeft</li>
+                <li data-value="rotateOutDownRight">rotateOutDownRight</li>
+                <li data-value="rotateOutUpLeft">rotateOutUpLeft</li>
+                <li data-value="rotateOutUpRight">rotateOutUpRight</li>
+            </ul>
+
+            <h4>Sliding Entrances</h4>
+            <ul label="Sliding Entrances">
+                <li data-value="slideInUp">slideInUp</li>
+                <li data-value="slideInDown">slideInDown</li>
+                <li data-value="slideInLeft">slideInLeft</li>
+                <li data-value="slideInRight">slideInRight</li>
+
+            </ul>
+            <h4>Sliding Exits</h4>
+            <ul label="Sliding Exits">
+                <li data-value="slideOutUp">slideOutUp</li>
+                <li data-value="slideOutDown">slideOutDown</li>
+                <li data-value="slideOutLeft">slideOutLeft</li>
+                <li data-value="slideOutRight">slideOutRight</li>
+
+            </ul>
+
+            <h4>Zoom Entrances</h4>
+            <ul label="Zoom Entrances">
+                <li data-value="zoomIn">zoomIn</li>
+                <li data-value="zoomInDown">zoomInDown</li>
+                <li data-value="zoomInLeft">zoomInLeft</li>
+                <li data-value="zoomInRight">zoomInRight</li>
+                <li data-value="zoomInUp">zoomInUp</li>
+            </ul>
+
+            <h4>Zoom Exits</h4>
+            <ul label="Zoom Exits">
+                <li data-value="zoomOut">zoomOut</li>
+                <li data-value="zoomOutDown">zoomOutDown</li>
+                <li data-value="zoomOutLeft">zoomOutLeft</li>
+                <li data-value="zoomOutRight">zoomOutRight</li>
+                <li data-value="zoomOutUp">zoomOutUp</li>
+            </ul>
+
+            <h4>Specials</h4>
+            <ul label="Specials">
+                <li data-value="hinge">hinge</li>
+                <li data-value="jackInTheBox">jackInTheBox</li>
+                <li data-value="rollIn">rollIn</li>
+                <li data-value="rollOut">rollOut</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-cell text-center valign-top">
+        <div id="disc"></div>
+        <div id="test"><h1>Animate.css</h1></div>
+    </div>
+</div>
+
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+  function testAnim(x) {
+    $('#test').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+      $(this).removeClass();
+    });
+  }
+  ;
+
+  $(document).ready(function () {
+    $('li').click(function (e) {
+      e.preventDefault();
+      var anim = $(this).attr('data-value');
+      $('#disc').html('<code>animated '+anim+'</code>');
+      testAnim(anim);
+    });
+  });
+
+
+</script>
+
+</body>
+</html>

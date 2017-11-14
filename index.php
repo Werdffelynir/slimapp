@@ -38,11 +38,14 @@ $app->post('/send', function (Request $request,  Response $response, $args = [])
             "name"      => $post["field0"],
             "company"   => $post["field1"],
             "topic"     => $post["field2"],
-            "text"      => $post["field3"]
+            "email"     => $post["field3"],
+            "text"      => $post["field4"]
         ];
 
-//        echo json_encode($post);
-//        exit;
+
+        echo json_encode($answer);
+        exit;
+
 
         foreach ($data as $key => $value)
             $message[] = "<b>$key:</b> $value";
