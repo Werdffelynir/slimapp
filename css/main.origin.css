@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Agency FB Cyrillic';
+    src: url('/fonts/AgencyFBCyrillic.eot');
+    src: local('Agency FB Cyrillic'), local('AgencyFBCyrillic'),
+    url('/fonts/AgencyFBCyrillic.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/AgencyFBCyrillic.woff') format('woff'),
+    url('/fonts/AgencyFBCyrillic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: Calibri, Arial, "sans-serif", "sans";
+    font-size: 100%;
+}
+body {
+    /*overflow-x: hidden;*/
+}
+#app {
+    background: url("/images/background.jpg");
+}
+
+section[id^="app"] {
+    /*border-top: 1px solid #5855f7;*/
+    /*border-bottom: 1px solid #5855f7;*/
+    /*margin: 0 auto;*/
+}
+section > div {
+    /*border-left: 1px solid #5855f7;*/
+    /*border-right: 1px solid #5855f7;*/
+    width: 1240px;
+    display: block;
+    margin: 0 auto;
+    height: calc(100vh - 220px);
+    min-height: 632px;
+}
+
+
+
+/* section logotype */
+.logotype {
+    text-align: right;
+    padding-top: 20%;
+    padding-right: 10%;
+    padding-bottom: 20%;
+}
+.logotype > img {}
+
+/* section window */
+.window-wrapper {}
+.window-wrapper > div{
+    width: 1383px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#particles {
+    width: 1140px;
+    height: 300px;
+    margin-top: 180px;
+}
+#window {
+    width: 1383px;
+    height: 632px;
+    background: url("/images/window.png") no-repeat center center;
+}
+.window-description{
+    width: 100%;
+    position: absolute;
+    margin-top: 424px;
+    text-align: center;
+    color: #C00000;
+}
+
+/* section contacts */
+
+.btn {
+    width: 160px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    padding: 12px 0;
+    color: #ececec;
+    background: #C00000;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn:hover {
+    background: #a80000;
+}
+
+.contacts-form {
+    position: relative;
+    width: 300px;
+    margin: 10px auto;
+}
+.contacts-form input, .contacts-form textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1em;
+    border: 1px solid #b8b8b8;;
+    border-radius: 15px;
+    outline: none;
+}
+.contacts-form textarea {
+    height: 115px;
+}
+.contacts-form > form > span{
+    display: block;
+    padding-bottom: 10px;
+    position: relative;
+}
+.contacts-form .animated {
+    opacity: 0;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    background: rgba(255,255,255,0.4);
+    text-align: center;
+}
+.loader img {
+    padding-top: 10%;
+}
+
+/* section society */
+.society {
+    width: 283px;
+    height: 340px;
+    background: url("/images/buttons_red.png");
+    position: absolute;
+    right: 15%;
+    margin-top: -200px;
+}
+
+.soc-btn{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: rgba(116, 0, 0, 0);
+    border-radius: 18px;
+    position: absolute;
+    /*transition: background-color 1s;*/
+    cursor: pointer;
+}
+/*.soc-btn:hover {
+    background: rgba(116, 0, 0, 0.5);
+}*/
+
+.soc-1{
+    margin-top: 51px;
+    margin-left: 147px;
+}
+.soc-2{
+    margin-top: 100px;
+    margin-left: 58px;
+    background: url("/images/ico.behance.png") center center;
+}
+.soc-3{
+    margin-top: 158px;
+    margin-left: 148px;
+    background: url("/images/ico.pinterest.png") center center;
+}
+.soc-4{
+    margin-top: 253px;
+    margin-left: 193px;
+}
+
+#copy{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 150%;
+    font-family: "Agency FB Cyrillic",  "Calibri", "Arial", "sans-serif", "sans";
+}
+#copy>span{
+    font-family: "Calibri", "Arial", "sans-serif", "sans";
+}
+
+
+/* monitors and laptops */
+@media screen and (min-width: 1240px)  {
+
+}
+/* end monitors and laptops */
+
+
+@media screen and (max-width: 1383px)  {
+
+    #window, #particles {
+        width: 100%;
+    }
+
+    section > div {
+        width: 100%;
+    }
+}
+
+
+/* tablet and mobile */
+@media screen and (max-width: 1240px)  {
+
+    #window, #particles {
+        width: 100%;
+    }
+
+    section > div {
+        width: 100%;
+    }
+
+    .logotype {
+        padding-top: 45%;
+        padding-right: 20%;
+    }
+    .logotype > img {
+        width: 70%;
+    }
+
+    .window-description{
+        font-size: 110%;
+    }
+    .society {
+        right: 15%;
+        margin-top: 0px;
+    }
+
+    #copy {
+        margin-top: 160px;
+    }
+}
+/* end tablet and mobile */
+
+
+
+
+
+
+
+
+
+

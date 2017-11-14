@@ -18,7 +18,8 @@ body {
     /*overflow-x: hidden;*/
 }
 #app {
-    background: url("/images/background.jpg");
+    background: url("/images/background.jpg") no-repeat 100% top;
+    background-size: cover;
 }
 
 section[id^="app"] {
@@ -41,8 +42,8 @@ section > div {
 /* section logotype */
 .logotype {
     text-align: right;
-    padding-top: 20%;
-    padding-right: 10%;
+    padding-top: 30%;
+    padding-right: 0%;
     padding-bottom: 20%;
 }
 .logotype > img {}
@@ -63,7 +64,7 @@ section > div {
 #window {
     width: 1383px;
     height: 632px;
-    background: url("/images/window_25_3.png") no-repeat center center;
+    background: url("/images/window.png") no-repeat center center;
 }
 .window-description{
     width: 100%;
@@ -158,12 +159,12 @@ section > div {
 .soc-2{
     margin-top: 100px;
     margin-left: 58px;
-    background: url("/images/ico.behance_25.png") center center;
+    background: url("/images/ico.behance.png") center center;
 }
 .soc-3{
     margin-top: 158px;
     margin-left: 148px;
-    background: url("/images/ico.pinterest_25.png") center center;
+    background: url("/images/ico.pinterest.png") center center;
 }
 .soc-4{
     margin-top: 253px;
@@ -190,13 +191,26 @@ section > div {
 
 @media screen and (max-width: 1383px)  {
 
-    #window, #particles {
+    #window {
         width: 100%;
     }
-
+    #particles {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
     section > div {
         width: 100%;
     }
+
+    .logotype {
+        padding-top: 24%;
+        padding-right: 24%;
+    }
+    .logotype>img {
+        width: 70%;
+    }
+
 }
 
 
@@ -206,14 +220,13 @@ section > div {
     #window, #particles {
         width: 100%;
     }
-
     section > div {
         width: 100%;
     }
 
     .logotype {
-        padding-top: 45%;
-        padding-right: 20%;
+        padding-top: 40%;
+        padding-right: 21%;
     }
     .logotype > img {
         width: 70%;
@@ -223,12 +236,24 @@ section > div {
         font-size: 110%;
     }
     .society {
-        right: 15%;
+        right: 7%;
         margin-top: 0px;
     }
 
     #copy {
         margin-top: 160px;
+    }
+}
+
+
+@media screen and (max-width: 1024px)  {
+
+    #app-logo {
+        height: calc(100vh - 220px);
+    }
+
+    .window-description{
+        padding-top: 20px;
     }
 }
 /* end tablet and mobile */
