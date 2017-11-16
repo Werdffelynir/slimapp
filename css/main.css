@@ -225,18 +225,18 @@ section > div {
     }
 
     .logotype {
-        padding-top: 25%;
+        padding-top: 60%;
         text-align: center;
     }
     .logotype > img {
-        width: 350px;
+        width: 250px;
     }
 
     .window-description{
         font-size: 110%;
     }
     .society {
-        right: 33%;
+        right: 9%;
         margin-top: 0px;
     }
 

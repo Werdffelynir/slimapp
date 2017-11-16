@@ -1,4 +1,4 @@
-App.namespace('EmailForm', function(app) {
+App.namespace('EmailForm', function (app) {
 
   /**
    * @type {NamespaceApplication|App}
@@ -13,7 +13,7 @@ App.namespace('EmailForm', function(app) {
   /**
    * @namespace App.EmailForm.run
    */
-  _.run = function(){
+  _.run = function () {
 
     var btnOpen = App.node['app-contact-button'];
     var btnSend = App.node['app-contact-send'];
@@ -56,7 +56,7 @@ App.namespace('EmailForm', function(app) {
       if (!btnOpen.opened) {
         btnOpen.opened = true;
         inputs.map(function (it, i) {
-          startAnimation(it, 'fadeInDown', (i+1) * 300);
+          startAnimation(it, 'fadeInDown', (i + 1) * 300);
         });
         App.css(btnOpen, {cursor: 'auto', 'background': '#ddd'});
       }
@@ -65,7 +65,7 @@ App.namespace('EmailForm', function(app) {
 
     App.on(btnSend, 'click', function () {
       if (!btnSend.sended) {
-        var ok = true, ffs = {field3: App.query('textarea', App.node['app-contact-form']).value};
+        var ok = true, ffs = {field4: App.query('textarea', App.node['app-contact-form']).value};
 
         App.each(App.search('input', 'name', App.node['app-contact-form']), function (input, name) {
           ffs[name] = input.value;
@@ -81,11 +81,16 @@ App.namespace('EmailForm', function(app) {
           loaderOn();
           btnSend.sended = true;
 
-          App.ajax({method: 'POST', url: '/send', data: ffs}, function (status, data) {
+          App.ajax({
+            method: 'POST',
+            url: '/send',
+            useFormData: false,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: ffs
+          }, function (status, data) {
             data = JSON.parse(data);
             if (data.status === 0) {
               loaderOk();
-
             } else {
               loaderOff();
               btnSend.sended = false;
@@ -93,56 +98,29 @@ App.namespace('EmailForm', function(app) {
             }
           });
         }
+        loaderOn();
+        btnSend.sended = true;
 
+        App.ajax({
+          method: 'POST',
+          url: '/send',
+          data: ffs,
+          useFormData: false,
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }, function (status, data) {
+          data = JSON.parse(data);
+          if (data.status === 0) {
+            loaderOk();
+
+          } else {
+            loaderOff();
+            btnSend.sended = false;
+            console.error(data);
+          }
+        });
       }
 
     });
-
-    var sendEMail = function () {
-
-      var ffs = {
-        field3: App.query('textarea', App.node['app-contact-form']).value
-      };
-
-      App.each(App.search('input', 'name', App.node['app-contact-form']), function (input, name) {
-        ffs[name] = input.value;
-      });
-
-      App.ajax({method: 'POST', url: '/send', data: ffs}, function (status, data) {
-        console.log('send >> ', status, data);
-      });
-
-    };
-
-    // buttonSend.readySend = false;
-/*    buttonSend.onclick = function (event) {
-      if (buttonSend.readySend) {
-        var formFields = {
-          field3: App.query('textarea', App.node['app-contact-form']).value
-        };
-
-        App.each(App.search('input', 'name', App.node['app-contact-form']), function (input, name) {
-          formFields[name] = input.value;
-        });
-
-        console.log('formFields >> ', formFields);
-        App.ajax({method: 'POST', url: '/send', data: formFields}, function (status, data) {
-          console.log('send >> ', status, data);
-        });
-
-      } else {
-        event.target.classList.add('animated-contact-button');
-        App.Timer.timeout(function () {
-          buttonSend.readySend = true;
-          App.node['app-contact-form'].style.opacity = 1;
-          App.node['app-contact-form'].style.display = 'block';
-          App.node['app-contact-form'].classList.add('flipInX');
-          App.node['app-contact-form'].classList.add('animated');
-          event.target.innerHTML = "SEND";
-        }, 500);
-      }
-    };*/
-
 
   };
 

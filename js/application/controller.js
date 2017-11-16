@@ -20,24 +20,6 @@
           App.Animation.run();
           App.EmailForm.run();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          console.log(App.node);
         },
         function (error){
           console.error('It can not load important scripts! >>');
@@ -49,18 +31,3 @@
     });
   }
 })();
-
-
-// console.log(list);
-// console.log(App);
-// App.Animation.run();
-// App.EmailForm.run();
-/*
-var i = 0;
-var update = function() {
-  i ++;
-  App.inject('h1', i);
-
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);*/

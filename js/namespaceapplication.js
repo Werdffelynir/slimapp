@@ -763,13 +763,19 @@
    */
   NamespaceApplication.ajax = function (config, callback, thisInstance) {
     var key,
+      encodeData = function (object) {
+        var d = '';
+        for (var k in object)
+          d += '&' + k + '=' + encodeURIComponent(object[k]);
+        return d},
       form_data = new FormData(),
       xhr = new XMLHttpRequest(),
       conf = {
         method: config.method || 'GET',
         data: config.data || {},
         headers: config.headers || {},
-        action: config.action || config.url || document.location.href
+        action: config.action || config.url || document.location.href,
+        useFormData: config.useFormData !== undefined ? !!config.useFormData : true
       };
 
     thisInstance = (NamespaceApplication.typeOf(thisInstance, 'object')) ? thisInstance : {};
@@ -780,9 +786,10 @@
     }
 
     if (conf.method.toUpperCase() !== 'POST') {
+
       conf.action += conf.action.indexOf('?') === -1 ? '?' : '';
-      for (key in conf.data)
-        conf.action += '&' + key + '=' + encodeURIComponent(conf.data[key])
+      conf.action += encodeData(conf.data);
+
     } else
       for (key in conf.data)
         form_data.append(key, encodeURIComponent(conf.data[key]));
@@ -799,8 +806,7 @@
         callback.call(thisInstance, xhr.status, xhr.responseText, xhr);
     };
 
-    xhr.send(form_data);
-
+    xhr.send(conf.useFormData ? form_data : encodeData(conf.data));
     return xhr;
   };
 

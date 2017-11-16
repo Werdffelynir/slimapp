@@ -29,7 +29,6 @@ $app->get('/', function (Request $req,  Response $res, $args = []) {
 
 $app->post('/send', function (Request $request,  Response $response, $args = []) use ($config) {
 
-
     try {
         $message = [];
         $answer = ["status" => 0, "errmsg" => 0, "data" => []];
@@ -42,17 +41,13 @@ $app->post('/send', function (Request $request,  Response $response, $args = [])
             "text"      => $post["field4"]
         ];
 
-
-        echo json_encode($answer);
-        exit;
-
-
         foreach ($data as $key => $value)
             $message[] = "<b>$key:</b> $value";
 
         $messageHTML = '<p>' . join('</p><p>', $message) . '</p>';
 
         $mail = new PHPMailer(true);
+		$mail->charSet = "UTF-8";
         $mail->setFrom($config("mail.from"), $config("mail.from.name"));
         $mail->addAddress($config("mail.to"), $config("mail.to.name"));
         $mail->isHTML(true);
@@ -73,11 +68,5 @@ $app->post('/send', function (Request $request,  Response $response, $args = [])
         die (json_encode($answer));
     }
 });
-
-
-$app->get('/error', function (Request $req,  Response $res, $args = []) {
-    return $res->withStatus(400)->write('Bad Request');
-});
-
 
 $app->run();
