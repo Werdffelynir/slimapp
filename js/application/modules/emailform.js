@@ -98,27 +98,8 @@ App.namespace('EmailForm', function (app) {
             }
           });
         }
-        loaderOn();
-        btnSend.sended = true;
-
-        App.ajax({
-          method: 'POST',
-          url: '/send',
-          data: ffs,
-          useFormData: false,
-          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-        }, function (status, data) {
-          data = JSON.parse(data);
-          if (data.status === 0) {
-            loaderOk();
-
-          } else {
-            loaderOff();
-            btnSend.sended = false;
-            console.error(data);
-          }
-        });
       }
+
 
     });
 
